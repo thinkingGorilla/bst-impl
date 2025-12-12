@@ -1,7 +1,3 @@
-import com.sun.source.tree.Tree;
-
-import java.util.List;
-
 public class BinarySearchTree {
 
     public TreeNode root;
