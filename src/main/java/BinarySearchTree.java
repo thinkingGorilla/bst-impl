@@ -23,11 +23,13 @@ public class BinarySearchTree {
 
             System.out.println("before key: " + root.key);
             root.key = minValue(root.right);
+            // root.key = maxValue(root.left);
             System.out.println("after key: " + root.key);
             // 우측 서브트리의 최소값을 root.key로 올려썼으므로,
             // 오른쪽 서브트리에서 그 후임자 노드를 삭제해 중복을 제거한다.
             // (전임자 방식은 왼쪽 서브트리의 최대값을 사용하며, 그 경우에는 왼쪽 서브트리에서 전임자 노드를 삭제한다.)
             root.right = delete(root.right, root.key);
+            // root.left = delete(root.left, root.key);
             System.out.printf("%s, %s%n", root.key, root.right == null ? "null" : root.right.key);
         }
         return root;
